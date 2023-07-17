@@ -13,11 +13,12 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin("*")
+@RequestMapping("/intern")
 public class InternController {
     @Autowired
     private InternServiceImp internServiceImp;
     @GetMapping
-    public ResponseEntity<Iterable<Intern>> getAllIntern() {
+    public ResponseEntity<Iterable<Intern>> getAllInterns() {
         return new ResponseEntity<>(internServiceImp.findAll(), HttpStatus.OK);
     }
     @PostMapping

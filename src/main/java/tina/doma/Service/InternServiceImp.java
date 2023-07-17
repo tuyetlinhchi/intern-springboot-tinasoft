@@ -6,7 +6,7 @@ import tina.doma.Repository.InternRepo;
 
 import java.util.Optional;
 @Service
-public class InternServiceImp implements InternService {
+public class InternServiceImp implements IGeneralService<Intern> {
     @Autowired
     private InternRepo internRepository;
 
